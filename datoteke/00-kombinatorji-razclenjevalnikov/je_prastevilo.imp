@@ -1,0 +1,11 @@
+#n := 17;
+#i := 2;
+#prime := true;
+WHILE #i * #i <= #n DO (
+	IF #n mod #i = 0 THEN
+		#prime := false
+	ELSE
+		skip;
+	#i := #i + 1
+);
+PRINT #prime
