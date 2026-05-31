@@ -80,16 +80,17 @@ $$
 
 **Primer.** Vsaka grupa $G$ je model teorije za grupe.
 
-**Trditev.** Za poljubna modela $(X, (\op_X)_{\op \in \Sigma})$ in $(Y, (\op_Y)_{\op \in \Sigma})$ lahko definiramo model na $X \times Y$, pri čemer operacijo $(\op : n) \in \Sigma$ interpretiramo kot:
+**Trditev.** Za poljubna modela $(X, (\mathrm{op}_X)_{\mathrm{op} \in \Sigma})$ in $(Y, (\mathrm{op}_Y)_{\mathrm{op} \in \Sigma})$ lahko definiramo model na $X \times Y$, pri čemer operacijo $(\mathrm{op} : n) \in \Sigma$ interpretiramo kot:
+
 $$
-  \op_{X \times Y}((x_1, y_1), \dots, (x_n, y_n)) = (\op_X(x_1, \dots, x_n),\ \op_Y(y_1, \dots, y_n))
+  \mathrm{op}_{X \times Y}((x_1, y_1), \dots, (x_n, y_n)) = (\mathrm{op}_X(x_1, \dots, x_n),\ \mathrm{op}_Y(y_1, \dots, y_n))
 $$
 
 Posledica tega je, da ne obstaja algebrajska teorija za obsege, saj bi za poljubna obsega $X$ in $Y$ dobili obseg $X \times Y$, ki pa ni obseg, saj je $(1, 0) \cdot (0, 1) = (0, 0)$, torej imamo delitelje niča.
 
-**Def.** *Homomorfizem* med modeloma $X$ in $Y$ je taka preslikava $h : X \to Y$, da za vsako operacijo $(\op : n) \in \Sigma$ velja
+**Def.** *Homomorfizem* med modeloma $X$ in $Y$ je taka preslikava $h : X \to Y$, da za vsako operacijo $(\mathrm{op} : n) \in \Sigma$ velja
 
 $$
-  h\bigl(\op(a_1, \dots, a_n)) = \op(h(a_1), \dots, h(a_m))
+  h\bigl(\mathrm{op}(a_1, \dots, a_n)) = \mathrm{op}(h(a_1), \dots, h(a_m))
 $$
 
