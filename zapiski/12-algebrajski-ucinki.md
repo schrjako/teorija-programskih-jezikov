@@ -17,6 +17,7 @@ Zato se osredotočimo na manjkajoči opis specifičnih operacij. S študijem ope
 ## Signature in algebrajske teorije
 
 **Def.** *Signatura* $\Sigma$ za algebrajsko teorijo je seznam operacij in njihovih členosti (= arity):
+
 $$\Sigma = \mathrm{op}_1 : n_1,\ \dots,\ \mathrm{op}_k : n_k$$
 
 **Primer.** $\Sigma_{\text{grupa}} = \{\underbrace{m : 2}_{\text{množenje}},\ \underbrace{i : 1}_{\text{inverz}},\ \underbrace{e : 0}_{\text{enota}}\}$
