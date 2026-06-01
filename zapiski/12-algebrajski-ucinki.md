@@ -18,7 +18,7 @@ Zato se osredotočimo na manjkajoči opis specifičnih operacij. S študijem ope
 
 **Def.** *Signatura* $\Sigma$ za algebrajsko teorijo je seznam operacij in njihovih členosti (= arity):
 
-$$\Sigma = \mathrm{op}_1 : n_1,\ \dots,\ \mathrm{op}_k : n_k$$
+$$\Sigma = \op_1 : n_1,\ \dots,\ \op_k : n_k$$
 
 **Primer.** $\Sigma_{\text{grupa}} = \{\underbrace{m : 2}_{\text{množenje}},\ \underbrace{i : 1}_{\text{inverz}},\ \underbrace{e : 0}_{\text{enota}}\}$
 
@@ -31,10 +31,10 @@ $$
     \Gamma \vdash_\Sigma x
 } \qquad
 \infer{
-    \mathrm{op} : n \in \Sigma \quad
+    \op : n \in \Sigma \quad
     (\Gamma \vdash_\Sigma t_i)_{i=1}^n
 }{
-    \Gamma \vdash_\Sigma \mathrm{op}(t_1, \dots, t_n)
+    \Gamma \vdash_\Sigma \op(t_1, \dots, t_n)
 }
 $$
 
@@ -66,14 +66,14 @@ $$
 
 ## Interpretacije in modeli
 
-**Def.** *Interpretacija* signature $\Sigma$ je množica $X$ skupaj s funkcijo $\mathrm{op}_X : X^{n} \to X$ za vsak $(\mathrm{op} : n) \in \Sigma$.
+**Def.** *Interpretacija* signature $\Sigma$ je množica $X$ skupaj s funkcijo $\op_X : X^{n} \to X$ za vsak $(\op : n) \in \Sigma$.
 
 Interpretacija nam omogoča interpretirati vsak izraz $x_1, \dots, x_n \vdash t$ s preslikavo $\itp{t} : X^n \to X$, definirano kot:
 
 $$
 \begin{align*}
   \itp{x_1, \dots, x_n \vdash x_i}(a_1, \dots, a_n) &= a_i \\
-  \itp{\mathrm{op}(t_1, \dots, t_n)} &= \mathrm{op}_X(\itp{t_1}, \dots, \itp{t_n})
+  \itp{\op(t_1, \dots, t_n)} &= \op_X(\itp{t_1}, \dots, \itp{t_n})
 \end{align*}
 $$
 
@@ -81,17 +81,17 @@ $$
 
 **Primer.** Vsaka grupa $G$ je model teorije za grupe.
 
-**Trditev.** Za poljubna modela $(X, (\mathrm{op}_X)_{\mathrm{op} \in \Sigma})$ in $(Y, (\mathrm{op}_Y)_{\mathrm{op} \in \Sigma})$ lahko definiramo model na $X \times Y$, pri čemer operacijo $(\mathrm{op} : n) \in \Sigma$ interpretiramo kot:
+**Trditev.** Za poljubna modela $(X, (\op_X)_{\op \in \Sigma})$ in $(Y, (\op_Y)_{\op \in \Sigma})$ lahko definiramo model na $X \times Y$, pri čemer operacijo $(\op : n) \in \Sigma$ interpretiramo kot:
 
 $$
-  \mathrm{op}_{X \times Y}((x_1, y_1), \dots, (x_n, y_n)) = (\mathrm{op}_X(x_1, \dots, x_n),\ \mathrm{op}_Y(y_1, \dots, y_n))
+  \op_{X \times Y}((x_1, y_1), \dots, (x_n, y_n)) = (\op_X(x_1, \dots, x_n),\ \op_Y(y_1, \dots, y_n))
 $$
 
 Posledica tega je, da ne obstaja algebrajska teorija za obsege, saj bi za poljubna obsega $X$ in $Y$ dobili obseg $X \times Y$, ki pa ni obseg, saj je $(1, 0) \cdot (0, 1) = (0, 0)$, torej imamo delitelje niča.
 
-**Def.** *Homomorfizem* med modeloma $X$ in $Y$ je taka preslikava $h : X \to Y$, da za vsako operacijo $(\mathrm{op} : n) \in \Sigma$ velja
+**Def.** *Homomorfizem* med modeloma $X$ in $Y$ je taka preslikava $h : X \to Y$, da za vsako operacijo $(\op : n) \in \Sigma$ velja
 
 $$
-  h\bigl(\mathrm{op}(a_1, \dots, a_n)) = \mathrm{op}(h(a_1), \dots, h(a_m))
+  h\bigl(\op(a_1, \dots, a_n)) = \op(h(a_1), \dots, h(a_m))
 $$
 
